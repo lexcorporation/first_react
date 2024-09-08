@@ -1,9 +1,11 @@
+import { ReactNode } from "react";
+
 interface Props {
-  body: string;
+  children: ReactNode;
 }
 
 function Card(CardProps: Props) {
-  const { body } = CardProps;
+  const { children } = CardProps;
 
   return (
     <div
@@ -12,7 +14,7 @@ function Card(CardProps: Props) {
         width: "350px",
       }}
     >
-      <div className="card-body">{body}</div>
+      <div className="card-body">{children}</div>
     </div>
   );
 }
@@ -27,9 +29,6 @@ export function CardBody(props: CardBodyProps) {
     <>
       <h5 className="card-title">{title}</h5>
       <p className="card-text">{text}</p>
-      <a href="#" className="btn btn-primary">
-        Go somewhere F
-      </a>
     </>
   );
 }

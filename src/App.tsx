@@ -1,7 +1,14 @@
-import { CardBody } from "./components/Card";
+import Card, { CardBody } from "./components/Card";
+import List from "./components/List";
 
 function App() {
-  return <CardBody title={"Hola Peshito Loco"} text={"Como vas bro"} />;
+  const list = ["Sabrosa", "Deliciosa", "Jugosa"];
+  return (
+    <Card>
+      <CardBody title="Desde el interior de Card" text="Si, yo peshito loco" />
+      <List data={list} />
+    </Card>
+  );
 }
 
 export default App;
